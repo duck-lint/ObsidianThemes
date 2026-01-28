@@ -60,7 +60,7 @@ body {
   --canvas-color-6: var(--color-purple-rgb);
   --canvas-dot-pattern: var(--color-base-30);
   /* Caret (text entry cursor) */
-  --caret-color: var(--text-accent);
+  --caret-color: var(--color-red);
   /* Checkboxes */
   --checkbox-radius: var(--radius-s);
   --checkbox-size: var(--font-text-size);
@@ -81,8 +81,8 @@ body {
   --code-radius: var(--radius-s);
   --code-size: var(--font-smaller);
   --code-background: var(--color-base-05);
-  --code-normal: var(--text-faint);
-  --code-comment: rgba(var(--mono-rgb-100), 0.77769420);
+  --code-normal: var(--color-base-35);
+  --code-comment: var(--text-muted);
   --code-function: var(--color-yellow);
   --code-important: var(--color-orange);
   --code-keyword: var(--color-pink);
@@ -96,7 +96,7 @@ body {
   --collapse-icon-color: var(--text-normal);
   --collapse-icon-color-collapsed: var(--color-accent);
   /* Cursor */
-  --cursor: default;
+  --cursor: var(--color-red);
   --cursor-link: pointer;
   /* Dialogs - e.g. small modals, confirmations */
   --dialog-width: 560px;
@@ -666,8 +666,8 @@ body {
   --text-error: var(--color-red);
   --text-warning: var(--color-orange);
   --text-success: var(--color-green);
-  --text-selection: hsla(var(--color-accent-hsl), 0.2);
-  --text-highlight-bg: var(--text-faint);
+  --text-selection: hsla(var(--color-base-35), 0.42);
+  --text-highlight-bg: var(--color-base-35);
   --text-highlight-fg: var(--background-secondary);
   --text-accent: var(--color-accent-1);
   --text-accent-hover: var(--color-accent-2);
@@ -682,43 +682,52 @@ body {
   --highlight-mix-blend-mode: darken;
   --mono-rgb-0: 255, 255, 255;
   --mono-rgb-100: 0, 0, 0;
-  --color-red-rgb: 233, 49, 71;
-  --color-red: #e93147;
-  --color-orange-rgb: 236, 117, 0;
-  --color-orange: #ec7500;
-  --color-yellow-rgb: 224, 172, 0;
-  --color-yellow: #e0ac00;
-  --color-green-rgb: 8, 185, 78;
-  --color-green: #08b94e;
-  --color-cyan-rgb: 0, 191, 188;
-  --color-cyan: #00bfbc;
-  --color-blue-rgb: 8, 109, 221;
-  --color-blue: #086ddd;
-  --color-purple-rgb: 120, 82, 238;
-  --color-purple: #7852ee;
-  --color-pink-rgb: 213, 57, 132;
-  --color-pink: #d53984;
-  --color-base-00: hsl(244, 42%, 88%); /* MAIN DARK GREEN */
-  --color-base-05: hsl(244, 42%, 87%); /* ALT DARK BLUE */
-  --color-base-10: hsl(244, 42%, 92%); /* ALT DARK GREEN */
-  --color-base-20: hsl(244, 42%, 90%); /* MAIN DARK BLUE */
-  --color-base-25: #0A361E;
-  --color-base-30: hsl(252, 45%, 22%);
-  --color-base-35: #198C59;
-  --color-base-40: #20B777;
-  --color-base-50: hsl(255, 42%, 6%); /* GOLD */
-  --color-base-60: #22DABC;
-  --color-base-70: hsl(244, 42%, 10%); /* TEXT FAINT */
-  --color-base-100: hsl(244, 42%, 4%); /* TEXT MUTED */
+  --color-red-rgb: 206, 24, 38;
+  --color-red: lab(44% 66 42);
+  --color-orange-rgb: 193, 88, 27;
+  --color-orange: lab(50%  39  52);
+  --color-yellow-rgb: 173, 131, 0;
+  --color-yellow: lab(57%  6  71);
+  --color-green-rgb: 78, 139, 0;
+  --color-green: lab(52% -40  58);
+  --color-cyan-rgb: 0, 150, 137;
+  --color-cyan: lab(55% -42  -4);
+  --color-blue-rgb: 0, 110, 205;
+  --color-blue: lab(44%  0  -60);
+  --color-purple-rgb: 165, 140, 236;
+  --color-purple: lab(64%  30 -45);
+  --color-pink-rgb: 197, 70, 148;
+  --color-pink: lab(50%  58  -16);
+  --color-base-00: lab(76.19% 14.41 -14.09);
+  --color-base-05: lab(90.02% 14.94 -14.35);
+  --color-base-10: #111111; /* Not used */
+  --color-base-20: lab(85.66% 17.42 -13.55);
+  --color-base-25: #111111; /* Not used */
+  --color-base-30: #657b83;
+  --color-base-35: #9c900b;
+  --color-base-40: #111111; /* Not used */
+  --color-base-50: lab(42% -6 -6);
+  --color-base-60: #111111; /* Not used */
+  --color-base-70: lab(62% -4 -1);
+  --color-base-100: lab(26.2% 12.77 -13.1);
   --color-accent-hsl: var(--accent-h),
 			var(--accent-s),
 			var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --color-accent-1: hsl(calc(var(--accent-h) - 1), calc(var(--accent-s) * 1.01), calc(var(--accent-l) * 1.075));
   --color-accent-2: hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 1.15));
+  --background-modifier-form-field: var(--code-background);
   --background-secondary-alt: var(--color-base-05);
+  --interactive-normal: var(--code-background);
+  --interactive-hover: var(--background-secondary-alt);
+  --text-accent: var(--color-accent-1);
+  --interactive-accent: var(--color-accent);
+  --interactive-accent-hover: var(--color-accent-1);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-cover: rgba(220, 220, 220, 0.4);
+  --text-selection: color-mix(in srgb,
+  var(--color-base-100) 33%,
+  var(--color-base-35) 44%);
   --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
 		0 2px 3px 0 rgba(0,0,0,.05),
 		0 1px 1.5px 0 rgba(0,0,0,.03),
@@ -735,40 +744,42 @@ body {
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
 		0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
 		0px 30px 90px rgba(0, 0, 0, 0.2);
+  --pdf-shadow: 0 0 0 1px var(--background-modifier-border);
+  --pdf-thumbnail-shadow: 0 0 0 1px var(--background-modifier-border);
 }
 .theme-dark {
   color-scheme: dark;
   --highlight-mix-blend-mode: lighten;
   --mono-rgb-0: 0, 0, 0;
   --mono-rgb-100: 255, 255, 255;
-  --color-red-rgb: 228, 20, 27;
-  --color-red: #e4141b;
-  --color-orange-rgb: 247, 147, 26;
-  --color-orange: #f7931a; /* $BTC ORANGE */
-  --color-yellow-rgb: 204, 188, 15;
-  --color-yellow: #CCBC0F;
-  --color-green-rgb: 40, 226, 148;
-  --color-green: #28E294;
-  --color-cyan-rgb: 79, 210, 227;
-  --color-cyan: #4fd2c0;
-  --color-blue-rgb: 2, 10, 255;
-  --color-blue: #020aff;
-  --color-purple-rgb: 130, 76, 255;
-  --color-purple: #824cff;
-  --color-pink-rgb: 255, 129, 213;
-  --color-pink: #ff81d5;
-  --color-base-00: hsl(244, 42%,4%); /* MAIN DARK GREEN */
-  --color-base-05: hsl(244, 42%, 6%); /* MAIN DARK BLUE */
-  --color-base-10: hsl(244, 42%, 50%); /* ALT DARK GREEN */
-  --color-base-20: hsl(244, 28%, 11%); /* ALT DARK BLUE */
-  --color-base-25: #0A361E;
-  --color-base-30: hsl(252, 70%, 22%);
-  --color-base-35: #198C59;
-  --color-base-40: #20B777;
-  --color-base-50: hsl(255, 86%, 69%); /* GOLD */
-  --color-base-60: #22DABC;
-  --color-base-70: #4FD2C0; /* TEXT FAINT */
-  --color-base-100: hsl(0, 0%, 99%); /* TEXT MUTED */
+  --color-red-rgb: 255, 103, 93;
+  --color-red: lab(66% 63 40);
+  --color-orange-rgb: 255, 147, 86;
+  --color-orange: lab(72%  37  50);
+  --color-yellow-rgb: 242, 191, 63;
+  --color-yellow: lab(80% 6  68);
+  --color-green-rgb: 128, 184, 60;
+  --color-green: lab(74% -38  55);
+  --color-cyan-rgb: 57, 199, 185;
+  --color-cyan: lab(78% -40  -4);
+  --color-blue-rgb: 38, 139, 210;
+  --color-blue: lab(66% 0 -57);
+  --color-purple-rgb: 108, 113, 196;
+  --color-purple: lab(72%  30 -45);
+  --color-pink-rgb: 211, 111, 164;
+  --color-pink: lab(72%  55 -15);
+  --color-base-00: lab(22.91% 29.16 -33.35);
+  --color-base-05: lab(13.32% 32.62 -36.43);
+  --color-base-10: rgb(255, 255, 255);
+  --color-base-20: lab(8.58% 30.96 -34.61);
+  --color-base-25: rgb(255, 255, 255);
+  --color-base-30: lab(50% -6 -7);
+  --color-base-35: rgb(193, 177, 19);
+  --color-base-40: rgb(255, 255, 255);
+  --color-base-50: lab(75%  -5  -2);
+  --color-base-60: rgb(255, 255, 255);
+  --color-base-70: lab(56%  -8  -6);
+  --color-base-100: lab(81.74% 6.05 -6.83);
   --color-accent-hsl: var(--accent-h),
 			var(--accent-s),
 			var(--accent-l);
@@ -785,8 +796,8 @@ body {
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
   --text-selection: color-mix(in srgb,
-  var(--text-accent) 33%,
-  var(--background-secondary) 44%);
+  var(--color-base-100) 33%,
+  var(--color-base-35) 44%);
   --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
 		0 2px 4px 0 rgba(0,0,0,.15),
 		0 1px 1.5px 0 rgba(0,0,0,.1),
