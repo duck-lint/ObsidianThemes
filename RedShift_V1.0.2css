@@ -703,12 +703,12 @@ body {
   --color-base-10: #111111; /* Not used */
   --color-base-20: lab(85.03% 12.64 4.7);
   --color-base-25: #111111; /* Not used */
-  --color-base-30: #657b83;
+  --color-base-30: #836565;
   --color-base-35: #9c900b;
   --color-base-40: #111111; /* Not used */
-  --color-base-50: lab(42% -6 -6);
+  --color-base-50: lab(37.65% 11.26 4.36);
   --color-base-60: #111111; /* Not used */
-  --color-base-70: lab(62% -4 -1);
+  --color-base-70: lab(59.57% 4.09 1.47);
   --color-base-100: lab(26.47% 11.59 4.63);
   --color-accent-hsl: var(--accent-h),
 			var(--accent-s),
@@ -773,12 +773,12 @@ body {
   --color-base-10: rgb(255, 255, 255);
   --color-base-20: lab(12.59% 30.34 17.6);
   --color-base-25: rgb(255, 255, 255);
-  --color-base-30: lab(50% -6 -7);
+  --color-base-30: lab(45.73% 12.06 4.64);
   --color-base-35: rgb(193, 177, 19);
   --color-base-40: rgb(255, 255, 255);
-  --color-base-50: lab(75%  -5  -2);
+  --color-base-50: lab(71.96% 5.38 1.94);
   --color-base-60: rgb(255, 255, 255);
-  --color-base-70: lab(56%  -8  -6);
+  --color-base-70: lab(50.61% 12.2 4.66);
   --color-base-100: lab(81.88% 5.58 2.01);
   --color-accent-hsl: var(--accent-h),
 			var(--accent-s),
