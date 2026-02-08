@@ -463,6 +463,12 @@ body {
   --search-icon-color: var(--text-muted);
   --search-icon-size: 18px;
   --search-result-background: var(--background-primary);
+  /* Settings */ 
+  --setting-items-background: var(--background-primary-alt);
+  --setting-items-padding: var(--size-4-5);
+  --setting-items-radius: var(--radius-l);
+  --setting-items-border-width: 0;
+  --setting-items-border-color: var(--background-modifier-border);
   /* Sizes */
   --size-1-1: 1px;
   --size-2-1: 2px;
@@ -860,6 +866,23 @@ body {
   margin-top: var(--size-4-4);
   padding-top: var(--size-4-1);
   border-top: var(--border-width) solid var(--text-normal);
+}
+
+.setting-group .setting-items {
+  background-color: var(--code-background);
+  padding: var(--setting-items-padding);
+  border-radius: var(--setting-items-radius);
+  -electron-corner-smoothing: var(--corner-smoothing);
+  border: var(--setting-items-border-width) solid var(--setting-items-border-color);
+}
+
+.setting-group .setting-group-search {
+  background-color: var(--setting-items-background);
+  padding: var(--setting-items-padding);
+  border-top-left-radius: var(--setting-items-radius);
+  border-top-right-radius: var(--setting-items-radius);
+  border: var(--setting-items-border-width) solid var(--setting-items-border-color);
+  border-bottom: none;
 }
 
 * {
