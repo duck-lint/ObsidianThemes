@@ -862,6 +862,23 @@ body {
   border-top: var(--border-width) solid var(--text-normal);
 }
 
+.setting-group .setting-items {
+  background-color: var(--code-background);
+  padding: var(--setting-items-padding);
+  border-radius: var(--setting-items-radius);
+  -electron-corner-smoothing: var(--corner-smoothing);
+  border: var(--setting-items-border-width) solid var(--setting-items-border-color);
+}
+
+.setting-group .setting-group-search {
+  background-color: var(--setting-items-background);
+  padding: var(--setting-items-padding);
+  border-top-left-radius: var(--setting-items-radius);
+  border-top-right-radius: var(--setting-items-radius);
+  border: var(--setting-items-border-width) solid var(--setting-items-border-color);
+  border-bottom: none;
+}
+
 * {
   transition: background-color 0.169420s ease, color 0.1369420s ease;
 }
