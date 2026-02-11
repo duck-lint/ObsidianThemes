@@ -879,6 +879,14 @@ body {
   border-bottom: none;
 }
 
+.reveal-viewport {
+  background-color: var(--code-border-color)
+}
+
+.reveal .slides {
+  background: var(--code-background)
+}
+
 * {
   transition: background-color 0.169420s ease, color 0.1369420s ease;
 }
